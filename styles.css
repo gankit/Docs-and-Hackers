@@ -1,0 +1,23 @@
+h1.title {
+	font-family: 'Libre Franklin', sans-serif;
+}
+body {
+	/*font-family: 'Libre Baskerville', sans-serif;*/
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+}
+
+hr.style1{
+	/*border-top: 1px solid #8c8b8b;*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+p.lead-text {
+	margin-bottom: 20px;
+	
+}
+div.bottom-button {
+	margin-bottom: 40px;
+	
+}
