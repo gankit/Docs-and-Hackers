@@ -21,3 +21,22 @@ div.bottom-button {
 	margin-bottom: 40px;
 	
 }
+
+.haveVsWantBar { fill: #267ddd; }
+.haveVsWantText { 
+	fill: white;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+}
+.haveVsWantNumbers { 
+	fill: rgb(51, 51, 51);
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 12px;
+}
+
+#specializationCloudChart .x.axis path {
+  display: none;
+}
+footer .social {
+  color: #267ddd;
+}

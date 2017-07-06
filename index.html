@@ -4,43 +4,286 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
+    <script src="https://use.fontawesome.com/91a2bd48df.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- Custom font -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin" rel="stylesheet">
-
-    <!-- Custom styles -->
+        <!-- Custom styles -->
     <link href="styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"  charset="utf-8"></script>
+    <script src="d3pie.min.js"></script>
+
   </head>
   <body>
     <div class="container">
       <div class="col-md-12">
-      <div style="margin-top:40px" class="row">
-        <div class="col-md-8 offset-md-2"><h1 class="title">Docs And Hackers</h1></div>
-      </div>
-      </div>
-        <div style="margin-top:30px" class="col-md-8 offset-md-2">
-          <p class="lead lead-text">We are a group of medical practitioners and software developers who aim to improve the practice of medicine with technology.</p>
-          <p><b>Next Meeting:</b> <i>TBD. Register to get notified.</i></p>
-          <a class="typeform-share button" href="https://ankitgupta00.typeform.com/to/pQHB1m" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-hide-headers=true data-hide-footer=true target="_blank">Join the group </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-
-          <hr class="style1">
-          <p>Technology was supposed to improve healthcare. Unfortunately, it has increased physician work load, decreased <a href="http://annals.org/aim/article/2546704/allocation-physician-time-ambulatory-practice-time-motion-study-4-specialties" target="_blank">doctor-patient time</a> at a <a href="https://www.foley.com/stimulus-package-contains-19-billion-for-health-care-technology-spending-and-adoption-of-electronic-health-records-02-18-2009/" target="_blank">significant cost</a> to the taxpayer.</p>
-
-          <p>Over the next decade, it is obvious that technology will have a significant impact on the practice of medicine. From providing <a href="http://www.newyorker.com/magazine/2017/04/03/ai-versus-md" target="_blank">diagnostic support</a>, improving <a href="https://www.forbes.com/sites/matthewherper/2017/01/05/grail-which-aims-to-invent-blood-test-to-detect-cancer-to-raise-1-billion/#912a53737928" target="_blank">early detection</a>, to creating <a href="https://techcrunch.com/2016/01/06/virtual-reality-therapy-treating-the-global-mental-health-crisis/" target="_blank">new modalities</a> of care.</p>
-          <p>We aim to accelerate our trajectory towards this future by regularly bringing doctors and hackers together. We meet about once a month, where participants share new ideas, get feedback from the group and potentially form teams. Whether it is for a side project, a new startup or a research paper. </p>
-          <p>Increasing connections between physicians and programmers will help both groups understand each other better. And create solutions that helps doctors work better, stay happier, improves patient experience and decreases overall cost. Please sign up if you are interested.</p>
-          <div class="bottom-button">
-          <a class="typeform-share button" href="https://ankitgupta00.typeform.com/to/pQHB1m" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-hide-headers=true data-hide-footer=true target="_blank">Join the group</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+        <div style="margin-top:40px" class="row">
+          <div class="col-12">
+            <img src="docsandhackerslogo.png" style="width: 240px; display: block; margin: auto"/>
+            <!-- <h1 class="title">Docs And Hackers</h1> -->
           </div>
+        </div>
       </div>
+      <div style="margin-top:30px" class="col-md-12 col-lg-10 offset-lg-1">
+        <p class="lead lead-text">We are a group of medical practitioners and software builders who aim to improve the practice of medicine with technology.</p>
+        <p><b>Next Meeting:</b> <i>July 19th, 2017 at WeWork SOMA (156 2nd St., San Francisco)</i>. <a href="https://www.eventbrite.com/e/docs-and-hackers-tickets-35800481203" target="_blank">Get tickets</a> to join in person or tune in on <a href="https://www.facebook.com/docsandhackers/" target="_blank">Facebook Live</a>.</p>
+        <a role="button" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" href="https://ankitgupta00.typeform.com/to/pQHB1m" target="_blank" >Join the group</a>        
+        <hr class="style1">
+        <p>Technology was supposed to improve healthcare. Unfortunately, it has increased <a href="http://thehill.com/blogs/pundits-blog/healthcare/317233-doctors-are-increasingly-burnt-out-thanks-to-paperwork" target="_blank">physician work load</a>, decreased <a href="http://annals.org/aim/article/2546704/allocation-physician-time-ambulatory-practice-time-motion-study-4-specialties" target="_blank">doctor-patient time</a> at a <a href="https://www.foley.com/stimulus-package-contains-19-billion-for-health-care-technology-spending-and-adoption-of-electronic-health-records-02-18-2009/" target="_blank">significant cost</a> to the taxpayer.</p>
+
+        <p>Over the next decade, it is obvious that technology will have a significant impact on the practice of medicine. From providing <a href="http://www.newyorker.com/magazine/2017/04/03/ai-versus-md" target="_blank">diagnostic support</a>, improving <a href="https://www.forbes.com/sites/matthewherper/2017/01/05/grail-which-aims-to-invent-blood-test-to-detect-cancer-to-raise-1-billion/#912a53737928" target="_blank">early detection</a>, to creating <a href="https://techcrunch.com/2016/01/06/virtual-reality-therapy-treating-the-global-mental-health-crisis/" target="_blank">new modalities</a> of care.</p>
+        <p>We aim to accelerate our trajectory towards this future by regularly bringing doctors and hackers together. We meet about once a month, where participants share new ideas, get feedback from the group and potentially form teams. Whether it is for a side project, a new startup or a research paper. </p>
+        <p>Increasing connections between physicians and builders will help both groups understand each other better. And create solutions that helps doctors work better, stay happier, improves patient experience and decreases overall cost. Please sign up if you are interested.</p>
+        <div class="bottom-button">
+        <a role="button" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:5px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" href="https://ankitgupta00.typeform.com/to/pQHB1m" target="_blank" >Join the group</a>        
+        </div>
+        <hr class="style1">
+        <p>Docs And Hackers now has over 250 members. Curious who is a part of the group? Here are some cool statistics.</p>
+        <div class="row" style="padding-top: 20px;">
+          <div class="col-md-5" id="docsVsHackersChart">
+          <h5 style="text-align: center">Doctor or Hacker?</h5>
+          </div>
+          <div class="col-md-7">
+            <h5 style="text-align: center">Why join the group?</h5>
+            <svg id="haveVsWantChart"></svg>
+          </div>
+        </div>
+<!--         <div class="row" style="padding-top: 20px;">
+            <h5 style="text-align: center">Specializations</h5>
+            <svg id="specializationCloudChart"></svg>
+        </div>
+ -->      </div>
+
     </div>
+    <footer class="bg-faded mt-4">
+        <div class="container py-3">
+            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">Crafted with ❤️ &nbsp; by <a href="http://www.linkedin.com/in/ghorawat/" target="_blank">two</a> <a href="https://www.linkedin.com/in/ankitgupta00" target="_blank">builders</a> passionate about the future of healthcare.
+                        </div>
+                    <div class="col-md-12 text-center">
+                      <span class="fa-stack fa-lg">
+                        <a href="https://www.facebook.com/docsandhackers/" class="facebook social" target="_blank">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </a>
+                      </span>
+                      <span class="fa-stack fa-lg">
+                        <a href="https://twitter.com/docsandhackers" class="twitter social" target="_blank">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </a>
+                      </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="d3.layout.cloud.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        var pie = new d3pie("docsVsHackersChart", {
+          "size": {
+            "canvasHeight": 250,
+            "canvasWidth": 300
+          },
+          "data": {
+              "content": [
+                {"label":"Doctor","value":19},
+                {"label":"Hacker", "value":50},
+                {"label":"Both", "value": 4},
+                {"label":"Neither", "value":27}
+
+                ]
+
+         },
+        "labels": {
+            "mainLabel": {
+              "font": "Source Sans Pro",
+              "fontSize": 14,
+            },  
+            "percentage": {
+              "font": "Source Sans Pro",
+              "fontSize": 12
+            },
+        },
+        "misc": {
+            "colors": {
+              "background": null, // transparent
+              "segments": [
+                "#267ddd", "#f6511d", "#7fb800", "#B1740F", "#0F0A0A"
+              ],
+              "segmentStroke": "#ffffff"
+            }
+           }
+         })
+
+
+var data = [
+  {interest: "Want a new project",    value:  48},
+  {interest: "Have a project",    value:  28},
+  {interest: "Just curious",     value: 64}
+  ];
+// set the dimensions and margins of the graph
+var margin = {top: 30, right: 20, bottom: 0, left: 0},
+    width = 300 - margin.left - margin.right,
+    height = 200 - margin.top - margin.bottom;
+
+// set the ranges
+var y = d3.scaleBand()
+          .range([height, 0])
+          .padding(0.1);
+
+var x = d3.scaleLinear()
+          .range([0, width]);
+          
+// append the svg object to the body of the page
+// append a 'group' element to 'svg'
+// moves the 'group' element to the top left margin
+var svg = d3.select("#haveVsWantChart")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+
+  // format the data
+  data.forEach(function(d) {
+    d.value = +d.value;
+  });
+
+  // Scale the range of the data in the domains
+  y.domain(data.map(function(d) { return d.interest; }));
+  x.domain([0, d3.max(data, function(d) { return d.value*1.2; })]);
+  // x.domain([0, 80]);
+
+  // append the rectangles for the bar chart
+  svg.selectAll(".haveVsWantBar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "haveVsWantBar")
+      .attr("y", function(d) { return y(d.interest); })
+      .attr("height", y.bandwidth())
+      .attr("x", function(d) { return 0; })
+      .attr("width", 0)
+      .transition()
+        .duration(1500)
+      .attr("width", function(d) { return x(d.value); });
+svg.selectAll("g")
+      .data(data)
+    .enter().append("text")
+        .attr("class", "haveVsWantText")
+        .attr("x", 0)
+        .attr("y", function(d) { return y.bandwidth()/2 + y(d.interest);} )
+        .attr("dx", ".35em")
+        .attr("dy", ".35em")
+        .text(function(d) { return d.interest; });
+
+svg.selectAll("g")
+      .data(data)
+    .enter().append("text")
+        .attr("class", "haveVsWantNumbers")
+        .attr("x", function(d) { return x(d.value);})
+        .attr("y", function(d) { return y.bandwidth()/2 + y(d.interest);} )
+        .attr("dx", "0.75em")
+        .attr("dy", ".35em")
+        .text(function(d) { return d.value + "%"; });
+  // add the x Axis
+  svg.append("g")
+      .call(
+        d3.axisTop(x).tickFormat(function(d) {
+          return d + "%";
+        })
+      );
+
+
+var data = [
+  {password: "Python",    category:  "hacker"},
+  {password: "iOS",    category:  "hacker"},
+  {password: "Backend",    category:  "hacker"},
+  {password: "Frontend",    category:  "hacker"},
+  {password: "Gastroentology",    category:  "doctor"},
+  {password: "Gastroentology",    category:  "doctor"},
+  {password: "Urology",    category:  "doctor"},
+  {password: "Urology",    category:  "doctor"},
+  ];
+
+var margin = {top: 20, right: 20, bottom: 40, left: 20},
+    width = 600 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+  // var categories = d3.keys(d3.nest().key(function(d) { return d.category; }).sortKeys(d3.ascending).entries(data));
+  var categories = [...new Set(data.map(item => item.category))];
+  var color = d3.scaleOrdinal().range(["#267ddd", "#f6511d", "#7fb800", "#B1740F", "#0F0A0A"]);
+  var fontSize = d3.scalePow().exponent(5).domain([0,1]).range([10,80]);
+
+  var layout = d3.layout.cloud()
+      .timeInterval(10)
+      .size([width, height])
+      .words(data)
+      .rotate(function(d) { return 0; })
+      .font('monospace')
+      .fontSize(function(d,i) { return fontSize(Math.random()); })
+      .text(function(d) { return d.password; })
+      .spiral("archimedean")
+      .on("end", draw)
+      .start();
+
+  var svg = d3.select("#specializationCloudChart")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  var wordcloud = svg.append("g")
+      .attr('class','wordcloud')
+      .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+
+  var x0 = d3.scaleBand()
+      .range([0, width])
+      .padding(0.1)
+      .domain(categories);
+
+  var xAxis = d3.axisBottom(x0);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+    .selectAll('text')
+      .style('font-size','20px')
+      .style('fill',function(d) { return color(d); })
+      .style('font','sans-serif');
+
+  function draw(words) {
+    wordcloud.selectAll("text")
+        .data(words)
+      .enter().append("text")
+        .attr('class','word')
+        .style("font-size", function(d) { return d.size + "px"; })
+        .style("font-family", function(d) { return d.font; })
+        .style("fill", function(d) { 
+            var paringObject = data.filter(function(obj) { return obj.password === d.text});
+            return color(paringObject[0].category); 
+        })
+        .attr("text-anchor", "middle")
+        .attr("transform", function(d) { return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"; })
+        .text(function(d) { return d.text; });
+  };
+
+      });
+
+    </script>
   </body>
 </html>
