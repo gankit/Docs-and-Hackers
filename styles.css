@@ -40,3 +40,7 @@ div.bottom-button {
 footer .social {
   color: #267ddd;
 }
+svg {
+	display: block;
+	margin: auto;
+}
