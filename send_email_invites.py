@@ -57,7 +57,7 @@ Running a company up is difficult. The complexities of healthcare's incentive st
 <br/><br/>\
 The meetup is only open to healthcare founders or CEOs. Anything that gets discussed (or disclosed) within the meetup, stays confidential within the group.\
 <br/><br/>\
-If you aren't a healthcare startup founder yet, no sweat - there are many open meetups planned in the future. You might also be interested in a <a href=\"http://www.docsandhackers.com/#challenges\">curated list of real world challenges</a> on our website. Start building something useful today!\
+If you aren't a healthcare startup founder yet, no sweat - there are many open meetups planned in the future.\
 <br/><br/>\
 Best,<br/>\
 Team D&H Boston.\
@@ -76,14 +76,14 @@ In addition to this special topic, we will have lots of time to meet other healt
 Best,<br/>\
 Team D&H Bay Area.\
 <br/>\
-PS: Check out our website for some <a href=\"http://www.docsandhackers.com/#challenges\">real world challenges</a>. Or find some <a href=\"http://www.docsandhackers.com/#find_physicians\">innovative physicians</a> for your next idea.<br/>"
+PS: Check out our website to find some <a href=\"http://www.docsandhackers.com/#find_physicians\">innovative physicians</a> for your next idea.<br/>"
 
 welcome_email_subject = "Welcome to Docs and Hackers!"
 welcome_email_body = "Hi <NAME/>,<br/><br/>\
 Welcome to <a href=\"http://www.docsandhackers.com\">Docs and Hackers</a>, a community of medical practitioners and software builders who aim to improve the practice of medicine with technology.\
 <br/><br/>1500+ people have joined the group so far from all across the world. 23% of the members are doctors. 34% of the members have a project and want help whereas 45% of members want a new project. Lots of great connections, waiting to happen!\
 <br/><br/>\
-We have frequent meetups in several cities around the world. Visit <a href=\"http://www.docsandhackers.com\">our website</a> to see our upcoming meetups. In addition, check out some <a href=\"http://www.docsandhackers.com/#challenges\">real world challenges</a> on our website. Or find some <a href=\"http://www.docsandhackers.com/#find_physicians\">innovative physicians</a> for your next idea.\
+We have frequent meetups in several cities around the world. Visit <a href=\"http://www.docsandhackers.com\">our website</a> to see our upcoming meetups. In addition, find some <a href=\"http://www.docsandhackers.com/#find_physicians\">innovative physicians</a> for your next idea.\
 <br/><br/>\
 Please share this email with any friends or colleagues who might be interested in joining the group. They could either be healthcare professionals or tech builders looking to build innovative products and services in digital health.\
 <br/><br/>\
@@ -104,7 +104,7 @@ Feel free to share this event with your friends who are running healthcare compa
 Best,<br/>\
 Team D&H Boston.\
 <br/>\
-PS: Check out our website for some <a href=\"http://www.docsandhackers.com/#challenges\">real world challenges</a>. Or find some <a href=\"http://www.docsandhackers.com/#find_physicians\">innovative physicians</a> for your next idea.<br/>"
+PS: Check out our website to find some <a href=\"http://www.docsandhackers.com/#find_physicians\">innovative physicians</a> for your next idea.<br/>"
 
 pitch_request_email_subject = "Docs and Hackers - Want to pitch?"
 pitch_request_email_body = "Hi <NAME/>,<br/><br/>\
@@ -294,7 +294,7 @@ def create_add_founder_message(name, email):
   message_text = string.replace(add_founder_email_body, '<NAME/>', name)
   subject_text = string.replace(add_founder_email_subject, '<NAME/>', name)
   message = MIMEText(message_text, 'html')
-  message['to'] = email
+  message['to'] = my_email #email
   message['from'] = "Ankit Gupta (Docs and Hackers) <"+my_email+">"
   message['subject'] = subject_text
   return {'raw': base64.urlsafe_b64encode(message.as_string())}
@@ -1095,9 +1095,9 @@ def main():
         notification_sent_body = {
           'values': notification_sent_column_values
         }
-        result = service_sheets.spreadsheets().values().update(
-            spreadsheetId=spreadsheetId, range=notification_sent_range,
-            valueInputOption='RAW', body=notification_sent_body).execute()
+        # result = service_sheets.spreadsheets().values().update(
+        #     spreadsheetId=spreadsheetId, range=notification_sent_range,
+        #     valueInputOption='RAW', body=notification_sent_body).execute()
 
 
 
